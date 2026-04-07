@@ -1,4 +1,4 @@
-% The LaTeX class file should maintain a clean separation between the style and content.
+﻿% The LaTeX class file should maintain a clean separation between the style and content.
 % Users should not have to modify the class file to change the document's content.
 
 
@@ -520,7 +520,7 @@
 %-----------------------------------------------------------------------------------------------------------------------
 % cite the reference style
 \RequirePackage[numbers,square,comma,sort&compress,super]{natbib}
-\bibliographystyle{gbt7714-2005}
+\bibliographystyle{GBT7714-2005NLang}
 \newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}}
 
 

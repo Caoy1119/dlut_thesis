@@ -187,7 +187,7 @@
     bottom=3.5cm,
     left=2.5cm,
     right=2.5cm,
-    headsep=1.2cm,
+    headsep=1.1cm,
     headheight=0.5cm,
     footskip=1.65cm,
 ]{geometry}
@@ -197,7 +197,13 @@
     \hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
 
 \RequirePackage{setspace}
-\setstretch{1.35}
+\newcommand{\dlut@zhstretch}{1.3491026738}
+\newcommand{\dlut@enstretch}{1.1934369806}
+\newcommand{\dlut@setchineselinespacing}{\setstretch{\dlut@zhstretch}\selectfont}
+\newcommand{\dlut@setenglishlinespacing}{\setstretch{\dlut@enstretch}\selectfont}
+\newcommand{\dlutsetchineselinespacing}{\dlut@setchineselinespacing}
+\newcommand{\dlutsetenglishlinespacing}{\dlut@setenglishlinespacing}
+\dlut@setchineselinespacing
 
 
 %-----------------------------------------------------------------------------------------------------------------------
@@ -288,6 +294,7 @@
 % Table of contents in English
 \newcommand\mktoe{
     \begingroup
+    \dlut@setenglishlinespacing
     \if@twocolumn
         \@restonecoltrue\onecolumn
     \else
@@ -643,8 +650,9 @@
 {
     \clearpage
     \chapter[\dlut@label@en@abstract]{\mdseries \dlut@label@en@abstract}
+    \dlut@setenglishlinespacing
 }
-{}
+{\dlut@setchineselinespacing}
 
 \newcommand\englishkeywords[1]{%
     \vspace{2ex}\indent{\bf\zihao{-4} \dlut@label@en@keywords} #1}

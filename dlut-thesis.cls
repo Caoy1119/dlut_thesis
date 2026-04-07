@@ -594,7 +594,7 @@
     \vskip 10pt
         {\songti\zihao{-4}\dlut@label@originaltitle}\dlutunderline[303pt]{\dlut@value@zh@title}
     \vskip 3pt
-    \indent{\songti\zihao{-4}\dlut@label@authorsign} \dlutunderline[8em]{} \hspace{1.3em} {\songti\zihao{-4}\dlut@label@originalDate}\dlutunderline[4em]{}~年~\dlutunderline[2em]{}~月~\dlutunderline[2em]{}~日~
+    \indent{\songti\zihao{-4}\dlut@label@authorsign} \dlutunderline[8em]{\includegraphics[height=0.8cm]{figures/figure2}} \hspace{1.3em} {\songti\zihao{-4}\dlut@label@originalDate}\dlutunderline[4em]{}~年~\dlutunderline[2em]{}~月~\dlutunderline[2em]{}~日~
     \vskip 20mm
     \begin{center}
         {\heiti\zihao{-2} \dlut@label@authorization}
@@ -604,9 +604,9 @@
     \vskip 25pt
         {\songti\zihao{-4}\dlut@label@originaltitle}\dlutunderline[303pt]{\dlut@value@zh@title}
     \vskip 3pt
-    \indent{\songti\zihao{-4}\dlut@label@authorsign} \dlutunderline[10.65em]{} {\songti\zihao{-4}\dlut@label@originalDate}\dlutunderline[3em]{}年~\dlutunderline[2em]{}~月~\dlutunderline[2em]{}~日~
+    \indent{\songti\zihao{-4}\dlut@label@authorsign} \dlutunderline[10.65em]{\includegraphics[height=0.8cm]{figures/figure2}} {\songti\zihao{-4}\dlut@label@originalDate}\dlutunderline[3em]{}年~\dlutunderline[2em]{}~月~\dlutunderline[2em]{}~日~
     \vskip 3pt
-    \indent{\songti\zihao{-4}\dlut@label@Supervisorsign} \dlutunderline[10.65em]{} {\songti\zihao{-4}\dlut@label@originalDate}\dlutunderline[3em]{}~年~\dlutunderline[2em]{}~月~\dlutunderline[2em]{}~日~
+    \indent{\songti\zihao{-4}\dlut@label@Supervisorsign} \dlutunderline[10.65em]{\includegraphics[height=0.8cm]{figures/figure1}} {\songti\zihao{-4}\dlut@label@originalDate}\dlutunderline[3em]{}~年~\dlutunderline[2em]{}~月~\dlutunderline[2em]{}~日~
     \vskip 3pt
     \clearpage
     \if@twoside

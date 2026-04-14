@@ -1,4 +1,4 @@
-﻿% The LaTeX class file should maintain a clean separation between the style and content.
+% The LaTeX class file should maintain a clean separation between the style and content.
 % Users should not have to modify the class file to change the document's content.
 
 
@@ -45,6 +45,7 @@
 \ProcessOptions\relax
 \ifdlut@adobe
     \setCJKmainfont[AutoFakeBold=true, Path="fonts/adobe/"]{AdobeSongStd-Light.otf}
+    \setCJKmonofont[AutoFakeBold=true, Path="fonts/windows/"]{SimSun.ttc}
     \newCJKfontfamily{\songti}   [AutoFakeBold=true, Path="fonts/adobe/"] {AdobeSongStd-Light.otf}
     \newCJKfontfamily{\heiti}    [AutoFakeBold=true, Path="fonts/adobe/"] {AdobeHeitiStd-Regular.otf}
     \newCJKfontfamily{\kaishu}   [AutoFakeBold=true, Path="fonts/adobe/"] {AdobeKaitiStd-Regular.otf}
@@ -53,6 +54,7 @@
     \newCJKfontfamily{\xihei}    [AutoFakeBold=true, Path="fonts/windows/"] {STXiHei.ttf}
 \else
     \setCJKmainfont[AutoFakeBold=true, Path="fonts/windows/"]{SimSun.ttc}
+    \setCJKmonofont[AutoFakeBold=true, Path="fonts/windows/"]{SimSun.ttc}
     \newCJKfontfamily{\songti}   [AutoFakeBold=true, Path="fonts/windows/"] {SimSun.ttc}
     \newCJKfontfamily{\heiti}    [AutoFakeBold=true, Path="fonts/windows/"] {SimHei.ttf}
     \newCJKfontfamily{\kaishu}   [AutoFakeBold=true, Path="fonts/windows/"] {SimKai.ttf}
@@ -73,6 +75,7 @@
 %-----------------------------------------------------------------------------------------------------------------------
 % originality statement
 \def\dlut@label@original{学位论文原创性申明}
+\def\dlut@label@committeemembers{硕士学位论文答辩委员会}
 \def\dlut@label@authorization{大连理工大学学位论文版权使用授权书}
 \def\dlut@label@authorsign{作~~者~~签~~名~~：}
 \def\dlut@label@Supervisorsign{导~~师~~签~~名~~：}
@@ -135,6 +138,20 @@
 \def\dlut@value@zh@defenddate{\today}
 \def\dlut@value@en@defenddate{\today}
 
+\def\dlut@value@titleone{（主席单位及职称）}
+\def\dlut@value@titletwo{（委员一单位及职称）}
+\def\dlut@value@titlethree{（委员二单位及职称）}
+\def\dlut@value@titlefour{（委员三单位及职称）}
+\def\dlut@value@titlefive{（委员四单位及职称）}
+\def\dlut@value@profone{（主席姓名）}
+\def\dlut@value@proftwo{（委员一姓名）}
+\def\dlut@value@profthree{（委员二姓名）}
+\def\dlut@value@proffour{（委员三姓名）}
+\def\dlut@value@proffive{（委员四姓名）}
+\def\dlut@value@dabianren{硕士生}
+\def\dlut@value@shijian{\dlut@value@zh@defenddate}
+\def\dlut@value@where{（答辩地点）}
+
 
 %-----------------------------------------------------------------------------------------------------------------------
 % New commands for setting values
@@ -144,6 +161,19 @@
 \newcommand\advisor[2]{\def\dlut@value@zh@advisor{#1}\def\dlut@value@en@advisor{#2}}
 \newcommand\major[2]{\def\dlut@value@zh@major{#1}\def\dlut@value@en@major{#2}}
 \newcommand\defenddate[1]{\def\dlut@value@zh@defenddate{#1}\def\dlut@value@en@defenddate{#1}}
+\newcommand\titleone[1]{\def\dlut@value@titleone{#1}}
+\newcommand\titletwo[1]{\def\dlut@value@titletwo{#1}}
+\newcommand\titlethree[1]{\def\dlut@value@titlethree{#1}}
+\newcommand\titlefour[1]{\def\dlut@value@titlefour{#1}}
+\newcommand\titlefive[1]{\def\dlut@value@titlefive{#1}}
+\newcommand\profone[1]{\def\dlut@value@profone{#1}}
+\newcommand\proftwo[1]{\def\dlut@value@proftwo{#1}}
+\newcommand\profthree[1]{\def\dlut@value@profthree{#1}}
+\newcommand\proffour[1]{\def\dlut@value@proffour{#1}}
+\newcommand\proffive[1]{\def\dlut@value@proffive{#1}}
+\newcommand\dabianren[1]{\def\dlut@value@dabianren{#1}}
+\newcommand\shijian[1]{\def\dlut@value@shijian{#1}}
+\newcommand\where[1]{\def\dlut@value@where{#1}}
 
 
 %-----------------------------------------------------------------------------------------------------------------------
@@ -214,22 +244,22 @@
         number = {\arabic{chapter}},
         format = { \CTEXifname{\raggedright\heiti\zihao{3}}{\centering\heiti\zihao{-3}\textbf}},,
         pagestyle = {dlut@headings},
-        beforeskip = 4bp,
-        afterskip = 26bp,
+        beforeskip = 1.86bp,
+        afterskip = 27.43bp,
         fixskip = true,
         lofskip = 0pt,
         lotskip = 0pt,
     },
     section={
         format = {\heiti\zihao{4}},
-        beforeskip = 14bp,
-        afterskip = 14bp,
+        beforeskip = 4.71bp,
+        afterskip = 6.85bp,
         fixskip = true,
     },
     subsection={
         format = {\raggedright\heiti\zihao{-4}},
-        beforeskip = 13bp,
-        afterskip = 13bp,
+        beforeskip = 6.85bp,
+        afterskip = 4.3bp,
         fixskip = true,
     },
     subsubsection={
@@ -615,6 +645,48 @@
     \vskip 3pt
     \indent{\songti\zihao{-4}\dlut@label@Supervisorsign} \dlutunderline[10.65em]{\includegraphics[height=0.8cm]{figures/figure1}} {\songti\zihao{-4}\dlut@label@originalDate}\dlutunderline[3em]{}~年~\dlutunderline[2em]{}~月~\dlutunderline[2em]{}~日~
     \vskip 3pt
+    \clearpage
+    \if@twoside
+        \thispagestyle{empty}
+        \cleardoublepage
+    \fi
+}
+
+
+%-----------------------------------------------------------------------------------------------------------------------
+% defense committee page
+\newcommand\committee{%
+    \cleardoublepage
+    \pdfbookmark[0]{\dlut@label@committeemembers}{committee}
+    \thispagestyle{empty}
+    \begin{center}
+        \parbox[t][1.52cm][c]{\textwidth}
+        {\heiti\zihao{-2}\centerline \dlut@label@committeemembers}
+    \end{center}
+
+    \vskip 50pt
+    {\songti\zihao{4} \noindent{答辩人：\dlut@value@dabianren}}
+    \vskip 35pt
+    {\songti\zihao{4} \noindent{答辩委员会委员：}}
+    \vskip 25pt
+    \begin{center}
+        {\zihao{4}
+            \begin{tabular}{rl}
+                \dlut@value@titleone & {\dlutunderline[150pt]{\dlut@value@profone}}\songti\zihao{5}（注：主席）
+                \\[0.7cm]
+                \dlut@value@titletwo & \dlutunderline[150pt]{\dlut@value@proftwo}
+                \\[0.7cm]
+                \dlut@value@titlethree & \dlutunderline[150pt]{\dlut@value@profthree}
+                \\[0.7cm]
+                \dlut@value@titlefour & \dlutunderline[150pt]{\dlut@value@proffour}
+                \\[0.7cm]
+                \dlut@value@titlefive & \dlutunderline[150pt]{\dlut@value@proffive}
+            \end{tabular}}
+    \end{center}
+    \vskip 40pt
+    {\songti\zihao{4} \noindent{答辩日期：\dlut@value@shijian}}
+    \vskip 15pt
+    {\songti\zihao{4} \noindent{答辩地点：\dlut@value@where}}
     \clearpage
     \if@twoside
         \thispagestyle{empty}
